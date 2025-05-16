@@ -19,3 +19,41 @@ list1=[1,5,3]
 outer(inner,list1)
 
 # 4)
+count=0
+if (True):
+    temp=10
+    count+=temp
+    print(temp)
+print(count)
+print(temp)
+
+def local():
+    temp=5
+    temp+=count
+    return print(temp)
+local()
+print(temp)
+
+# 5)
+def count1():
+    x=0
+    def counter():
+        nonlocal x
+        x+=1
+        print (x)
+    return counter
+closure=count1()
+closure()
+closure()
+
+# 6)
+def count1(y):
+    x=0
+    def counter(y):
+        nonlocal x
+        x+=y
+        print (x)
+    return counter
+closure=count1(2)
+closure(3)
+closure(4)
