@@ -47,13 +47,13 @@ closure()
 closure()
 
 # 6)
-def count1(y):
+def count1(y=1):
     x=0
     def counter(y):
         nonlocal x
         x+=y
         print (x)
     return counter
-closure=count1(2)
+closure=count1()
 closure(3)
 closure(4)
